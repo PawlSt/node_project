@@ -1,0 +1,47 @@
+### POST - nowe dane
+
+POST http://localhost:7000/api/photos HTTP/1.1
+Content-Type: multipart/form-data; boundary=----FormBoundary1234
+
+------FormBoundary1234
+Content-Disposition: form-data; name="file"; filename="input.png"
+Content-Type: image/png
+
+< ./input.png
+
+------FormBoundary1234
+Content-Disposition: form-data; name="album"
+Content-Type: text/plain
+
+user_album
+------FormBoundary1234
+
+### GET - pobierz wszystkie dane
+GET http://localhost:7000/api/photos HTTP/1.1
+
+### GET - pobierz jeden element wg id
+GET http://localhost:7000/api/photos/1716408938532 HTTP/1.1
+
+### DELETE - usuń wg id
+DELETE http://localhost:7000/api/photos/1716395937928 HTTP/1.1
+
+### PATCH - updatuj wg id
+PATCH http://localhost:7000/api/photos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"1716409240817"
+}
+
+###PATCH aktualizacja danych zdjęcia w oparciu o wiele tagów
+PATCH http://localhost:7000/api/photos/tags/mass
+Content-Type: application/json
+
+{
+    "id": 1717528982318,
+    "tags": [
+        {"name":"cipa", "popularity":"100"},
+        {"name":"fjut", "popularity":"200"},
+        {"name":"nigga", "popularity":"300"}
+    ]
+}

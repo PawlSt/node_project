@@ -1,0 +1,22 @@
+###GET pobierz jsona wszystkich tagów
+GET http://localhost:7000/api/tags HTTP/1.1
+
+###GET pobierz wszystkie nazwy tagów
+GET http://localhost:7000/api/tags/raw HTTP/1.1
+
+###GET pobranie taga według id
+GET http://localhost:7000/api/tags/11 HTTP/1.1
+
+###POST dodanie nowego taga
+POST http://localhost:7000/api/tags
+Content-Type: application/json
+
+{
+    "name": "#guwienko2",
+    "popularity": "69"
+}
+
+
+
+###GET pobranie tagów jednego zdjęcia
+GET http://localhost:7000/api/photos/tags/12345

@@ -1,0 +1,15 @@
+### pobranie danych meta wybranego zdjęcia
+GET http://localhost:7000/api/filters/metadata/123
+
+### użycie konkretnego filtra, dane o nim przekazujemy w jsonie
+PATCH http://localhost:7000/api/filters
+
+{
+    "id":1717533143528,
+    "lastChange":"grayscale",
+    "tint": {"r":"","g":"","b":""},
+    "extract": {"width":"","height":"","left":"","top":""},
+    "toFormat": "",
+    "resize": {"width":"", "height":""},
+    "rotate": ""
+}

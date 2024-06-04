@@ -1,0 +1,5 @@
+### pobranie danego zdjęcia
+GET http://localhost:7000/api/getimage/1681671564412
+
+### pobranie pliku przefiltrowanego zdjęcia
+GET http://localhost:7000/api/getimage/1681671564412/filter/tint
