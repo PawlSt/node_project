@@ -2,9 +2,15 @@ let photos = []
 let photosJson = [
   {
     id: 123,
-    album: 'cipa',
+    album: 'album',
     originalName: 'zdjecieee.png',
-    url: 'C:/users/pawel/OneDrive/Pulpit/node_project/upload/zdjecieee.png'
+    url: 'C:/Users/4ic1.DESKTOP-B8QUIDH/Desktop/node_project/upload/zdjecieee.png',
+    lastChange: "",
+    history: [{
+      status: "original",
+      lastModifiedDate: new Date().getTime()
+    }],
+    tags: []
   }
 ]
 let tags = [
