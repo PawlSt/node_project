@@ -33,4 +33,5 @@ let tags = [
   '#fitness',
   '#food'
 ]
-export { photos, photosJson, tags }
+let users = []
+export { photos, photosJson, tags, users }

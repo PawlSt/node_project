@@ -1,0 +1,22 @@
+###register
+POST http://localhost:7000/api/user/register HTTP/1.1
+Content-Type: application/json
+
+{    
+   "name": "asd",
+   "lastName": "asd",
+   "email":"granit@email.pl",
+   "password":"password"
+}
+
+###potwierdzenie tokenem
+GET http://localhost:7000/api/user/confirm/$2a$10$ODhAi4YY1F9neM3LJ8s/u.B7WSA9iPDRS8b3pQnc3JvOYprt8fH8C
+
+###login
+POST http://localhost:7000/api/user/login HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYW5pdEBlbWFpbC5wbCIsIm5hbWUiOiJhc2QiLCJsYXN0TmFtZSI6ImFzZCIsImlhdCI6MTcxNzY5MDI0NywiZXhwIjoxNzE3NjkwMjc3fQ.NC_iIedsbf2tjMTKkUy09Pzhv5yRZqeR-u61VSfiiEg
+
+{
+    "email": "granit@email.pl",
+    "password":"password"
+}
