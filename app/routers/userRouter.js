@@ -6,13 +6,14 @@ const userRouter = async (req, res) => {
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
-    let token = req.headers.authorization.split(' ')[1]
     const userData = JSON.parse(await getRequestData(req))
+    const data = await userFunctions.login(userData.email, userData.password)
     console.log(userData)
+    res.setHeader('Authorization', 'Bearer ' + data)
     res.writeHead(200, { 'Content-type': 'application/json' })
     res.end(
       JSON.stringify({
-        data: await userFunctions.login(userData.email, userData.password)
+        data: data
       })
     )
   } else if (req.url == '/api/user/register' && req.method == 'POST') {

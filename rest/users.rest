@@ -5,7 +5,7 @@ Content-Type: application/json
 {    
    "name": "asd",
    "lastName": "asd",
-   "email":"granit@email.pl",
+   "email":"apple@email.pl",
    "password":"password"
 }
 
@@ -14,9 +14,9 @@ GET http://localhost:7000/api/user/confirm/$2a$10$ODhAi4YY1F9neM3LJ8s/u.B7WSA9iP
 
 ###login
 POST http://localhost:7000/api/user/login HTTP/1.1
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYW5pdEBlbWFpbC5wbCIsIm5hbWUiOiJhc2QiLCJsYXN0TmFtZSI6ImFzZCIsImlhdCI6MTcxNzY5MDI0NywiZXhwIjoxNzE3NjkwMjc3fQ.NC_iIedsbf2tjMTKkUy09Pzhv5yRZqeR-u61VSfiiEg
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFwcGxlQGVtYWlsLnBsIiwibmFtZSI6ImFzZCIsImxhc3ROYW1lIjoiYXNkIiwiaWF0IjoxNzE3Njk5NzUxLCJleHAiOjE3MTc2OTk3ODF9.-COY43Kuy7zZS8ua_MhGIBLOrSjtRrRVezCbZYu5Bcc
 
 {
-    "email": "granit@email.pl",
+    "email": "apple@email.pl",
     "password":"password"
 }

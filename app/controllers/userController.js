@@ -98,14 +98,14 @@ const userFunctions = {
           },
           'verysecretkey',
           {
-            expiresIn: '30s' //"30s", "1m", "1d", "24h"
+            expiresIn: '3h' //"30s", "1m", "1d", "24h"
           }
         )
         console.log({ token: token })
         return token
       }
-      createToken()
-      return 'login fajen'
+      const logToken = createToken()
+      return logToken
     } else {
       return 'login niefajen'
     }

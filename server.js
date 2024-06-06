@@ -4,6 +4,7 @@ import { downloadRouter } from './app/routers/downloadRouter.js'
 import { filtersRouter } from './app/routers/filtersRouter.js'
 import { tagsRouter } from './app/routers/tagsRouter.js'
 import { userRouter } from './app/routers/userRouter.js'
+import { profileRouter } from './app/routers/profileRouter.js'
 import formidable from 'formidable'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
@@ -38,6 +39,11 @@ const server = http
     //users router
     else if (req.url.search('/api/user') != -1) {
       await userRouter(req, res)
+    }
+
+    //profile router
+    else if (req.url.search('/api/profile') != -1) {
+      await profileRouter(req, res)
     }
   })
   .listen(process.env.APP_PORT, () =>
