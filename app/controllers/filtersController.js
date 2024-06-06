@@ -29,6 +29,7 @@ const filtersFunctions = {
       data.lastChange +
       photoUrl.slice(extensionIndex)
     //applying filters
+    let ntf = ''
     switch (data.lastChange) {
       case 'negate':
         await sharp(photoToChange.url).negate().toFile(modifiedUrl)
@@ -37,16 +38,16 @@ const filtersFunctions = {
         await sharp(photoToChange.url).grayscale().toFile(modifiedUrl)
         break
       case 'extract':
-        await sharp(photoToChange.url).extract().toFile(modifiedUrl)
+        await sharp(photoToChange.url).extract(data.extract).toFile(modifiedUrl)
         break
       case 'toFormat':
-        await sharp(photoToChange.url).toFormat().toFile(modifiedUrl)
+        await sharp(photoToChange.url).toFormat(data.toFormat).toFile(modifiedUrl)
         break
       case 'resize':
-        await sharp(photoToChange.url).resize().toFile(modifiedUrl)
+        await sharp(photoToChange.url).resize(data.resize).toFile(modifiedUrl)
         break
       case 'rotate':
-        await sharp(photoToChange.url).rotate().toFile(modifiedUrl)
+        await sharp(photoToChange.url).rotate(data.rotate).toFile(modifiedUrl)
         break
       case 'flip':
         await sharp(photoToChange.url).flip().toFile(modifiedUrl)
@@ -55,9 +56,10 @@ const filtersFunctions = {
         await sharp(photoToChange.url).flop().toFile(modifiedUrl)
         break
       case 'tint':
-        await sharp(photoToChange.url).tint().toFile(modifiedUrl)
+        await sharp(photoToChange.url).tint(data.tint).toFile(modifiedUrl)
         break
       default:
+        ntf = 'mordo nie ma takiego filtera'
         break
     }
 
