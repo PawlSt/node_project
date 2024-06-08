@@ -16,12 +16,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: HomeView
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: AboutView
     },
     {
       path: '/:pathMatch(.*)*',

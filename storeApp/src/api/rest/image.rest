@@ -40,8 +40,8 @@ Content-Type: application/json
 {
     "id": 1717528982318,
     "tags": [
-        {"name":"cipa", "popularity":"100"},
-        {"name":"fjut", "popularity":"200"},
-        {"name":"nigga", "popularity":"300"}
+        {"name":"aaa", "popularity":"100"},
+        {"name":"bbb", "popularity":"200"},
+        {"name":"ccc", "popularity":"300"}
     ]
 }
