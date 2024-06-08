@@ -1,0 +1,30 @@
+### pobranie danych usera
+GET http://localhost:7000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFwcGxlQGVtYWlsLnBsIiwibmFtZSI6ImR1cGEiLCJsYXN0TmFtZSI6ImR1cGFsYXN0bmFtZSIsImlhdCI6MTcxNzcwMjIzMywiZXhwIjoxNzE3NzEzMDMzfQ.7eVSqWW7yy2_7fvqfwQkt3fEwgKYNfrnZ6IQnCtx1k0
+
+### aktualizacja danych usera
+PATCH http://localhost:7000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFwcGxlQGVtYWlsLnBsIiwibmFtZSI6Im5ld05hbWUiLCJsYXN0TmFtZSI6Im5ld0xhc3ROYW1lIiwiaWF0IjoxNzE3NzAyMTk5LCJleHAiOjE3MTc3MTI5OTl9.3NZCJGBYURFOaV7d6vKXXeuH6nwBBWNnWi_yny_4mMw
+
+{
+    "name": "dupa",
+    "lastName": "dupalastname"
+}
+
+### wysyłanie zdjęcia profilowego
+POST http://localhost:7000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFwcGxlQGVtYWlsLnBsIiwibmFtZSI6ImFzZCIsImxhc3ROYW1lIjoiYXNkIiwiaWF0IjoxNzE3ODM1NTIwLCJleHAiOjE3MTc4NDYzMjB9.a30CWPUrGtZ1K25J1emkQnZuu1qiHtbDDzZbdgbiqSA
+Content-Type: multipart/form-data; boundary=----FormBoundary1234
+
+------FormBoundary1234
+Content-Disposition: form-data; name="file"; filename="input.png"
+Content-Type: image/png
+
+< ./input.png
+
+------FormBoundary1234
+Content-Disposition: form-data; name="album"
+Content-Type: text/plain
+
+user_album
+------FormBoundary1234
